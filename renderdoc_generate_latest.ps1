@@ -1,7 +1,7 @@
 # GameMaker: Studio 2 RenderDoc settings generator script.
-# By @blokatt. 10/04/20.
+# By @odditica. 10/04/20.
 # 
-# https://github.com/Blokatt/renderdoc-gms2-kit/
+# https://github.com/odditica/renderdoc-gms2-kit/
 #
 # This version of the script generates a settings file for the last project you've built.
 #
@@ -91,7 +91,7 @@ $RENDERDOC_SETTINGS_FILENAME=".\renderdoc_settings.cap"
 if (Test-Path -Path "$RENDERDOC_SETTINGS_FILENAME") {
     $RENDERDOC_SETTINGS_JSON = Get-Content -Raw -Path "$RENDERDOC_SETTINGS_FILENAME" | ConvertFrom-Json
     if (( $RENDERDOC_SETTINGS_JSON.settings.commandLine -eq $Null ) -or ( $RENDERDOC_SETTINGS_JSON.settings.executable -eq $Null ) ) {
-        bail("Existing RenderDoc settings file doesn't contain expected fields, tell @blokatt!")        
+        bail("Existing RenderDoc settings file doesn't contain expected fields. This is likely due to a recent RenderDoc update, meaning this script will need to be updated - please report on GitHub.")
     } 
 } else {
     $RENDERDOC_SETTINGS_JSON = $RENDERDOC_JSON_TEMPLATE | ConvertFrom-Json

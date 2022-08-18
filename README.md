@@ -24,7 +24,7 @@ GMS2 uses temporary mount points to run the development builds from. I did not i
 This works with both YYC and VM builds.   
 A relatively new version of Windows 10 required.
 
- ### Written by [@blokatt](https://twitter.com/blokatt).    
+ ### Written by [@odditica](https://twitter.com/odditica).    
 
  ---
 
